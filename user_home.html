@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+
+    <link rel="stylesheet" href="https://use.typekit.net/ksr7nsu.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Music App</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-info bg-light  border-bottom mb-3">
+      <a class="navbar-brand" href="index.html">DJ Hero</a>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+
+<!--         <form class="form-inline my-2 my-lg-0" action="create_account.html">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign In</button>
+        </form> -->
+
+      </div>
+    </nav>
+
+
+    <div class="container-fluid h-100">
+      	<div class="row justify-content-center h-100">
+
+    		<div class="col-3 hidden-md-down">
+    			<div class="text-center">
+      				<img src="images/avatar.png" class="rounded mx-auto d-block w-50 mt-4"> 
+      				<div class="text-center mt-4">
+      					<button type="button" class="btn btn-outline-secondary m-1">My Party Songs</button>
+      				</div>
+      				<div class="text-center">
+      					<button type="button" class="btn btn-outline-secondary m-1">Throw Party</button>
+      				</div>
+      				<div class="text-center">
+      					<button type="button" class="btn btn-outline-secondary m-1">Discover</button>
+      				</div>
+      				<div class="text-center">
+      					<button type="button" class="btn btn-outline-secondary m-1">My Saved Reports</button>
+      				</div>
+      			</div>
+    		</div>
+
+    		<div class="col-4 hidden-md-down mt-4">
+    			<h2 class="border-bottom pb-2" style="display: inline-block;">Add Party Songs</h2>
+    			<p>Add songs you want to hear at parties.  <i class="fa fa-info-circle" title="Search for songs and use the plus icon to add them to your playlist"></i></p>
+    			<div class="md-form mt-0">
+  					<input class="form-control w-75" type="text" placeholder="Search Songs" aria-label="Search">
+				</div>
+				<ul class="list-group mt-3 w-75 overflow-hidden">
+  					<li class="list-group-item" id="Add Love My Way" style="display:block"><i id="Love My Way" class="fa fa-plus-circle" style="color: green;" onclick="addToPlaylist(this.id)"></i>  Love my Way<br><h6>The Psychedelic Furs</h6></li>
+  					<li class="list-group-item" id="Add The Killing Moon" style="display:block"><i id="The Killing Moon" class="fa fa-plus-circle" style="color: green;" onclick="addToPlaylist(this.id)"></i>  The Killing Moon<br><h6>Echo & The Bunnymen</h6></li>
+  					<li class="list-group-item" id="Add Blue Monday" style="display:block"><i id="Blue Monday" class="fa fa-plus-circle" style="color: green;" onclick="addToPlaylist(this.id)"></i>  Blue Monday<br><h6>New Order</h6></li>
+  					<li class="list-group-item" id="Add Heaven Knows I'm Miserable Now" style="display:block"><i id="Heaven Knows I'm Miserable Now" class="fa fa-plus-circle" style="color: green;" onclick="addToPlaylist(this.id)"></i>  Heaven Knows I'm Miserable Now<br><h6>The Smiths</h6></li>
+  					<li class="list-group-item" id="Add Love Will Tear Us Apart" style="display:block"><i id="Love Will Tear Us Apart" class="fa fa-plus-circle" style="color: green;" onclick="addToPlaylist(this.id)"></i>  Love Will Tear Us Apart<br><h6>Joy Division</h6></li>
+				</ul>
+    		</div>
+
+    		<div class="col-4 hidden-md-down mt-4">
+    			<h3 class="border-bottom pb-2" style="display: inline-block;">My Playlist</h3>
+    			<p>Your preferences as seen by hosts.  <i class="fa fa-info-circle" title="Remove songs from your current playlist with the minus icon"></i></p>
+    			<ul class="list-group mt-3 w-75 overflow-hidden">
+  					<li class="list-group-item" id="Play Love My Way" style="display: none"><i id="Love My Way" class="fa fa-minus-circle" style="color: red;" onclick="removeFromPlaylist(this.id)"></i>  Love my Way<br><h6>The Psychedelic Furs</h6></li>
+ 					<li class="list-group-item" id="Play The Killing Moon" style="display:none"><i id="The Killing Moon" class="fa fa-minus-circle" style="color: red;" onclick="removeFromPlaylist(this.id)"></i>  The Killing Moon<br><h6>Echo & The Bunnymen</h6></li>
+  					<li class="list-group-item" id="Play Blue Monday" style="display:none"><i id="Blue Monday" class="fa fa-minus-circle" style="color: red;" onclick="removeFromPlaylist(this.id)"></i>  Blue Monday<br><h6>New Order</h6></li>
+  					<li class="list-group-item" id="Play Heaven Knows I'm Miserable Now" style="display:none"><i id="Heaven Knows I'm Miserable Now" class="fa fa-minus-circle" style="color: red;" onclick="removeFromPlaylist(this.id)"></i>  Heaven Knows I'm Miserable Now<br><h6>The Smiths</h6></li>
+  					<li class="list-group-item" id="Play Love Will Tear Us Apart" style="display:none"><i id="Love Will Tear Us Apart" class="fa fa-minus-circle" style="color: red;" onclick="removeFromPlaylist(this.id)"></i>  Love Will Tear Us Apart<br><h6>Joy Division</h6></li>
+				</ul>
+    		</div>
+
+  		</div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/custom.js"></script>
+  </body>
+</html>
