@@ -1,1 +1,0 @@
-# hrdylan.github.io
