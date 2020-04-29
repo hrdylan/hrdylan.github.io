@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://use.fontawesome.com/cc89deff83.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+
+    <link rel="stylesheet" href="https://use.typekit.net/ksr7nsu.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/carousel.css">
+
+    <title>Music App</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-info bg-light  border-bottom mb-3">
+      <a class="navbar-brand" href="index.html">DJ Hero</a>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+
+<!--         <form class="form-inline my-2 my-lg-0" action="create_account.html">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign In</button>
+        </form> -->
+
+      </div>
+    </nav>
+
+
+    <div class="container-fluid h-100">
+      	<div class="row justify-content-center h-100">
+
+    		<div class="col-3 hidden-md-down">
+    			<div class="text-center">
+      				<img src="images/avatar.png" class="rounded mx-auto d-block w-50 mt-4"> 
+      				<div class="text-center mt-4">
+      					<button type="button" class="btn btn-outline-secondary m-1">My Party Songs</button>
+      				</div>
+      				<div class="text-center">
+      					<button type="button" class="btn btn-outline-secondary m-1">Throw Party</button>
+      				</div>
+      				<div class="text-center">
+      					<button type="button" class="btn btn-outline-secondary m-1">Discover</button>
+      				</div>
+      				<div class="text-center">
+      					<button type="button" class="btn btn-outline-secondary m-1">My Saved Reports</button>
+      				</div>
+      			</div>
+    		</div>
+
+    		<div class="col-8 hidden-md-down mt-4">
+    			<div id="throw_party" class="carousel slide" data-ride="carousel">
+  					<div class="carousel-inner">
+
+
+    					<div class="carousel-item active">
+      					
+                <h3 class="border-bottom pb-2" style="display: inline-block;">1. Pick Your Guests</h3>
+    						<p>Search for your guests and add them to your guestlist <i class="fa fa-info-circle" title="Remove songs from your current playlist with the minus icon"></i></p>
+    						
+                <div class="md-form d-flex align-items-center justify-content-center mb-4 w-50" id="search_container">
+    							<div class="input-group-prepend">
+    								<i class="fa fa-search" aria-hidden="true"></i>
+  								</div>
+  								<input class="form-control p-0 ml-2" id="search" type="text" placeholder="Search" aria-label="Search">	
+  								<div class="input-group-append" id="append">
+  									<i class="" id="found_indicator"></i>
+  								</div>	
+							  </div>
+                
+                <div class="container-fluid" id="guest_list">
+                </div>
+                
+                </br>
+							  <button type="button" id="next_button" class="btn btn-outline-success mt-3">Next</button>
+   					  
+              </div>
+    					
+
+
+              <div class="carousel-item">
+                <h3 class="border-bottom pb-2" style="display: inline-block;">2. Browse Your Guest's Favorite Party Songs</h3>
+                <p>Pick and choose from what your guests listen to <i class="fa fa-info-circle" title="Remove songs from your current playlist with the minus icon"></i></p>
+
+                <div class="row">
+                <div class="col-6 hidden-md-down mt-4">
+                  <h5 class="border-bottom pb-2" style="display: inline-block;">Guestlist Top 5</h5>
+                  <ul class="list-group mt-3 w-75 overflow-auto">
+                    <li class="list-group-item" id="Add Love My Way" style="display:block"><i id="Love My Way" class="fa fa-plus-circle" style="color: green;" onclick="addSong(this.id,'The Psychedelic Furs')"></i>  Love my Way<br><h6>The Psychedelic Furs</h6></li>
+                    <li class="list-group-item" id="Add The Killing Moon" style="display:block"><i id="The Killing Moon" class="fa fa-plus-circle" style="color: green;" onclick="addSong(this.id,'Echo & The Bunnymen')"></i>  The Killing Moon<br><h6>Echo & The Bunnymen</h6></li>
+                    <li class="list-group-item" id="Add Blue Monday" style="display:block"><i id="Blue Monday" class="fa fa-plus-circle" style="color: green;" onclick="addSong(this.id,'New Order')"></i>  Blue Monday<br><h6>New Order</h6></li>
+                    <li class="list-group-item" id="Add Heaven Knows I'm Miserable Now" style="display:block"><i id="Heaven Knows I'm Miserable Now" class="fa fa-plus-circle" style="color: green;" onclick="addSong(this.id,'The Smiths')"></i>  Heaven Knows I'm Miserable Now<br><h6>The Smiths</h6></li>
+                    <li class="list-group-item" id="Add Love Will Tear Us Apart" style="display:block"><i id="Love Will Tear Us Apart" class="fa fa-plus-circle" style="color: green;" onclick="addSong(this.id,'Joy Division')"></i>  Love Will Tear Us Apart<br><h6>Joy Division</h6></li>
+                  </ul>
+                </div>
+                <div class="col-6 hidden-md-down mt-4 h-50">
+                  <h5 class="border-bottom pb-2" style="display: inline-block;">Your Playlist</h5>
+                  <ul class="list-group mt-3 w-75 overflow-hidden" id='playlist'>
+                  
+                  </ul>
+                </div>
+                </div>
+                <button type="button" id="prev_button_1" class="btn btn-outline-success mt-3">Back</button>
+      					<button type="button" id="next_button_1" class="btn btn-outline-success mt-3">Next</button>
+    					</div>
+
+
+              <div class="carousel-item">
+                <h3 class="border-bottom pb-2" style="display: inline-block;">2. Add Your Guest's Favorite Genres</h3>
+                <p>Pick songs from genres and styles your guests prefer <i class="fa fa-info-circle" title="Remove songs from your current playlist with the minus icon"></i></p>
+
+                <div class="row" style="height: 1000px">
+                <div class="col-6 mt-4 h-100">
+                  <h5 class="border-bottom pb-2" style="display: inline-block;">Genres</h5>
+                  <canvas class="w-100" id="myChart"></canvas>
+                    <div class="md-form d-flex align-items-center justify-content-center mb-4 w-100" id="song_search_container">
+                    <div class="input-group-append m-1">
+                      <button class="btn btn-outline-secondary dropdown-toggle" id="genre_select" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dance</button>
+                      <div class="dropdown-menu" >
+                        <a class="dropdown-item" href="#">Pop</a>
+                        <a class="dropdown-item" href="#">Punk</a>
+                        <a class="dropdown-item" href="#">Rock</a>
+                        <a class="dropdown-item" href="#">Bowdoin Band BS</a>
+                        <a class="dropdown-item" href="#">Dance</a>
+                      </div>  
+                    </div>
+                    <input class="form-control p-0 ml-2" id="search_genre_songs" type="text" placeholder="Search" aria-label="Search">  
+                    </div>
+                    <button type="button" id="prev_button_2" class="btn btn-outline-success mt-3">Back</button>
+                    <button type="button" id="next_button_2" class="btn btn-outline-success mt-3">Next</button>
+                </div>
+                <div class="col-6 hidden-md-down mt-4 h-50">
+                  <h5 class="border-bottom pb-2" style="display: inline-block;">Your Playlist</h5>
+                  <ul class="list-group mt-3 w-75 overflow-hidden" id='playlist_1'>
+                  
+                  </ul>
+                </div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <h3 class="border-bottom pb-2" style="display: inline-block;">3.Add Your Favorite Songs</h3>
+                <p>Pick and choose from what your guests listen to <i class="fa fa-info-circle" title="Remove songs from your current playlist with the minus icon"></i></p>
+
+                <div class="row">
+                <div class="col-6 hidden-md-down mt-4">
+                  <h5 class="border-bottom pb-2" style="display: inline-block;">Add Songs</h5>
+                    <div class="md-form d-flex align-items-center justify-content-center mb-4 w-50" id="song_search_container">
+                    <div class="input-group-prepend">
+                      <i class="fa fa-search" aria-hidden="true"></i>
+                    </div>
+                    <input class="form-control p-0 ml-2" id="search_songs" type="text" placeholder="Search" aria-label="Search">  
+                    <div class="input-group-append">
+                      <i class="" id="song_found_indicator"></i>
+                    </div>  
+                  </div>
+                </div>
+                <div class="col-6 hidden-md-down mt-4 h-50">
+                  <h5 class="border-bottom pb-2" style="display: inline-block;">Your Playlist</h5>
+                  <ul class="list-group mt-3 w-75 overflow-hidden" id='playlist_2'>
+                  
+                  </ul>
+                </div>
+                </div>
+                
+                <button type="button" id="prev_button_3" class="btn btn-outline-success mt-3">Back</button>
+                <button type="button" id="next_button_3" class="btn btn-outline-success mt-3">Next</button>
+              </div>
+
+              <div class="carousel-item">
+                <h3 class="border-bottom pb-2" style="display: inline-block;">4. Edit and Save Your Playlist</h3>
+                <p>Pick and choose from what your guests listen to <i class="fa fa-info-circle" title="Remove songs from your current playlist with the minus icon"></i></p>
+
+                <div class="row">
+                <div class="col-6 hidden-md-down mt-4 h-50">
+                  <h5 class="border-bottom pb-2" style="display: inline-block;">Your Playlist</h5>
+                  <ul class="list-group mt-3 w-75 overflow-hidden" id='playlist_3'>
+                  
+                  </ul>
+                </div>
+                </div>
+                <button type="button" id="prev_button_4" class="btn btn-outline-success mt-3">Back</button>
+                <button type="button" id="save" class="btn btn-outline-success mt-3">Save Playlist</button>
+                <canvas id="confetti"></canvas>
+              </div>
+
+
+
+
+  					</div>
+				</div>
+
+  			</div>
+  		
+
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.2.0/dist/confetti.browser.min.js"></script>
+
+
+    <script src="js/carousel.js"></script>
+
+  </body>
+</html>
