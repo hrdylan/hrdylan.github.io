@@ -32,7 +32,11 @@ $("#next_button_3").click(function() {
 });
 
 $("#save").click(function() {
-  setTimeout(function(){blowConfetti();}, 400);
+  $('#save').tooltip('enable');
+  $('#save').tooltip('show');
+  setTimeout(function(){$('#save').tooltip('hide');}, 4000);
+  blowConfetti();
+  setSavedStatus();
 });
 
 $("#prev_button").click(function() {
@@ -269,6 +273,56 @@ var myChart = new Chart(ctx, {
 });
 
 
+$('#save').tooltip({
+  animation: true,
+  title: 'Playlist Saved!',
+  placement: 'right'
+
+})
+
+$('#save').tooltip('disable')
+
+$('.fa-exclamation').tooltip({
+  animation: true,
+  title: 'playlist not saved!',
+  placement: 'right'
+})
+
+function setSavedStatus() {
+  const exclamations = document.getElementsByClassName('fa fa-exclamation');
+  for (let i = 0;i<4;i++){
+    console.log(i)
+    const spinner = document.createElement('i')
+    spinner.className = "fa fa-circle-o-notch fa-spin"
+    spinner.style.color = 'rgb(92,184,92)'
+    spinner.style.opacity = 0.5
+    exclamations[0].parentNode.insertBefore(spinner, exclamations[0])
+    exclamations[0].remove();
+
+  }
+
+  setTimeout(function () {
+    const spinners = document.getElementsByClassName('fa fa-circle-o-notch fa-spin');
+    for (let i = 0;i<4;i++){
+      console.log(i)
+      const circle = document.createElement('i')
+      circle.className = "fa fa-check-circle-o fa-pulse"
+      circle.style.color = 'rgb(92,184,92)'
+      circle.style.transform = 'scale(1.2,1.2)'
+      spinners [0].parentNode.insertBefore(circle, spinners[0])
+      spinners [0].remove();
+    }
+    $('.fa-check-circle-o').tooltip({
+      animation: true,
+      title: 'playlist saved!',
+      placement: 'right'
+    })
+  }, 1000)
+  console.log('done')
+
+}
+
+// confetii code from the javascript library example, adapted for use in this project.
 function blowConfetti () {
   var count = 200;
 var defaults = {
