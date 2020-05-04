@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+
+    <link rel="stylesheet" href="https://use.typekit.net/ksr7nsu.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Music App</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-info bg-light  border-bottom mb-3">
+      <a class="navbar-brand" href="index.html">DJ Hero</a>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+
+<!--         <form class="form-inline my-2 my-lg-0" action="create_account.html">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign In</button>
+        </form> -->
+
+      </div>
+    </nav>
+
+
+    <div class="container-fluid h-100">
+      	<div class="row justify-content-center h-100">
+
+    		<div class="col-3 hidden-md-down">
+    			<div class="text-center">
+      				<img src="images/avatar.png" class="rounded mx-auto d-block w-50 mt-4"> 
+      				<div class="text-center mt-4">
+      					<button type="button" class="btn btn-outline-secondary m-1">My Party Songs</button>
+      				</div>
+      				<div class="text-center">
+      					<button type="button" class="btn btn-outline-secondary m-1" onclick="window.location.href='user_throws.html';">Throw Party</button>
+      				</div>
+      				<div class="text-center">
+      					<button type="button" class="btn btn-outline-secondary m-1" onclick="window.location.href='discover.html';">Discover</button>
+      				</div>
+      				<div class="text-center">
+      					<button type="button" class="btn btn-outline-secondary m-1">My Saved Reports</button>
+      				</div>
+      			</div>
+    		</div>
+
+    		<div class="col-4 hidden-md-down mt-4">
+    			<h2 class="border-bottom pb-2" style="display: inline-block;">Discover</h2>
+    			<p>See the top trending songs at Bowdoin.  <i class="fa fa-info-circle" title="These are the most popular songs at Bowdoin!"></i></p>
+				<ol class="list-group mt-3 w-75 overflow-hidden">
+  					<li class="list-group-item" id="Add Love My Way"></i>1.  Love my Way<br><h6>The Psychedelic Furs</h6></li>
+  					<li class="list-group-item" id="Add The Killing Moon"></i>2.  The Killing Moon<br><h6>Echo & The Bunnymen</h6></li>
+  					<li class="list-group-item" id="Add Blue Monday" ></i>3.  Blue Monday<br><h6>New Order</h6></li>
+  					<li class="list-group-item" id="Add Heaven Knows I'm Miserable Now" ></i>4.  Heaven Knows I'm Miserable Now<br><h6>The Smiths</h6></li>
+  					<li class="list-group-item" id="Add Love Will Tear Us Apart" ></i>5.  Love Will Tear Us Apart<br><h6>Joy Division</h6></li>
+				</ol>
+    		</div>
+
+    		<div class="col-4 hidden-md-down mt-4">
+    			<h3 class="border-bottom pb-2" style="display: inline-block;">Top Playlists</h3>
+    			<p>The most popular playlists at Bowdoin</p>
+            
+            <div id="accordion">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Sad Boyez of Coles Tower
+                    </button>
+                  </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="card-body">
+                      <ol class="list-group mt-3 w-75 overflow-hidden">
+                        <li class="list-group-item" id="Add Love My Way"></i>  Love my Way<br><h6>The Psychedelic Furs</h6></li>
+                        <li class="list-group-item" id="Add The Killing Moon"></i>  The Killing Moon<br><h6>Echo & The Bunnymen</h6></li>
+                        <li class="list-group-item" id="Add Blue Monday" ></i>  Blue Monday<br><h6>New Order</h6></li>
+                        <li class="list-group-item" id="Add Heaven Knows I'm Miserable Now" ></i>  Heaven Knows I'm Miserable Now<br><h6>The Smiths</h6></li>
+                        <li class="list-group-item" id="Add Love Will Tear Us Apart" ></i>  Love Will Tear Us Apart<br><h6>Joy Division</h6></li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Slapper Alertz for Hockey Fellows
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                  <div class="card-body">
+                    <ol class="list-group mt-3 w-75 overflow-hidden">
+                        <li class="list-group-item" id="Add Love My Way"></i>  Mo Bamba<br><h6>Sheck Wes</h6></li>
+                        <li class="list-group-item" id="Add The Killing Moon"></i>  YOSEMITE<br><h6>Travis Scott</h6></li>
+                        <li class="list-group-item" id="Add Blue Monday" ></i>  Gold Digger<br><h6>Kanye West</h6></li>
+                        <li class="list-group-item" id="Add Heaven Knows I'm Miserable Now" ></i>  Nice For What<br><h6>Drake</h6></li>
+                        <li class="list-group-item" id="Add Love Will Tear Us Apart" ></i>  Kyoto<br><h6>Yung Lean</h6></li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Golden Oldies Enjoyed by All
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                  <div class="card-body">
+                     <ol class="list-group mt-3 w-75 overflow-hidden">
+                        <li class="list-group-item" id="Add Love My Way"></i>  Goodbye Yellowbrick Road<br><h6>Elton John</h6></li>
+                        <li class="list-group-item" id="Add The Killing Moon"></i>  I am the Walrus<br><h6>The Beatles</h6></li>
+                        <li class="list-group-item" id="Add Blue Monday" ></i>  The Weight<br><h6>The Band</h6></li>
+                        <li class="list-group-item" id="Add Heaven Knows I'm Miserable Now" ></i>  Build me up Buttercup<br><h6>The Foundations</h6></li>
+                        <li class="list-group-item" id="Add Love Will Tear Us Apart" ></i>  Harvest Moon<br><h6>Neil Young</h6></li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+    		</div>
+
+  		</div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/custom.js"></script>
+  </body>
+</html>

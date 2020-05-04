@@ -1,6 +1,6 @@
 #search:focus {
 	border: 0;
-        border-bottom: 1px solid black;
+        border-bottom: 2px solid black;
         border-radius:0 ;
         box-shadow: none;
         outline: 0;
@@ -9,7 +9,7 @@
 
 #search {
 	border: 0;
-        border-bottom: 1px solid black;
+        border-bottom: 2px solid black;
         transition-property: border-bottom;
         transition-duration: 0.3s;
         border-radius:0 ;
@@ -20,7 +20,7 @@
 
 #search_songs {
         border: 0;
-        border-bottom: 1px solid black;
+        border-bottom: 2px solid black;
         transition-property: border-bottom;
         transition-duration: 0.3s;
         border-radius:0 ;
@@ -31,7 +31,7 @@
 
 #search_genre_songs {
         border: 0;
-        border-bottom: 1px solid black;
+        border-bottom: 2px solid black;
         transition-property: border-bottom;
         transition-duration: 0.3s;
         border-radius:0 ;
