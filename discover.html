@@ -35,41 +35,41 @@
 
 
     <div class="container-fluid h-100">
-      	<div class="row justify-content-center h-100">
+        <div class="row justify-content-center h-100">
 
-    		<div class="col-3 hidden-md-down">
-    			<div class="text-center">
-      				<img src="images/avatar.png" class="rounded mx-auto d-block w-50 mt-4"> 
-      				<div class="text-center mt-4">
-      					<button type="button" class="btn btn-outline-secondary m-1" onclick="window.location.href='user_home.html';">My Party Songs</button>
-      				</div>
-      				<div class="text-center">
-      					<button type="button" class="btn btn-outline-secondary m-1" onclick="window.location.href='user_throw.html';">Throw Party</button>
-      				</div>
-      				<div class="text-center">
-      					<button type="button" class="btn btn-secondary m-1" onclick="window.location.href='discover.html';">Discover Music</button>
-      				</div>
-      				<div class="text-center">
-      					<button type="button" class="btn btn-outline-info btn-sm m-1">Help</button>
-      				</div>
-      			</div>
-    		</div>
+        <div class="col-3 hidden-md-down">
+          <div class="text-center">
+              <img src="images/avatar.png" class="rounded mx-auto d-block w-50 mt-4"> 
+              <div class="text-center mt-4">
+                <button type="button" class="btn btn-outline-secondary m-1" onclick="window.location.href='user_home.html';">My Party Songs</button>
+              </div>
+              <div class="text-center">
+                <button type="button" class="btn btn-outline-secondary m-1" onclick="window.location.href='user_throw.html';">Throw Party</button>
+              </div>
+              <div class="text-center">
+                <button type="button" class="btn btn-secondary m-1" onclick="window.location.href='discover.html';">Discover Music</button>
+              </div>
+              <div class="text-center">
+                <button type="button" class="btn btn-outline-info btn-sm m-1" data-toggle="modal" data-target="#helpModal">Help</button>
+              </div>
+            </div>
+        </div>
 
-    		<div class="col-4 hidden-md-down mt-4">
-    			<h2 class="border-bottom pb-2" style="display: inline-block;">Discover</h2>
-    			<p>See the top trending songs at Bowdoin.  <i class="fa fa-info-circle" title="These are the most popular songs at Bowdoin!"></i></p>
-				<ol class="list-group mt-3 w-75 overflow-hidden">
-  					<li class="list-group-item" id="Add Love My Way"></i>1.  Love my Way<br><h6>The Psychedelic Furs</h6></li>
-  					<li class="list-group-item" id="Add The Killing Moon"></i>2.  The Killing Moon<br><h6>Echo & The Bunnymen</h6></li>
-  					<li class="list-group-item" id="Add Blue Monday" ></i>3.  Blue Monday<br><h6>New Order</h6></li>
-  					<li class="list-group-item" id="Add Heaven Knows I'm Miserable Now" ></i>4.  Heaven Knows I'm Miserable Now<br><h6>The Smiths</h6></li>
-  					<li class="list-group-item" id="Add Love Will Tear Us Apart" ></i>5.  Love Will Tear Us Apart<br><h6>Joy Division</h6></li>
-				</ol>
-    		</div>
+        <div class="col-4 hidden-md-down mt-4">
+          <h2 class="border-bottom pb-2" style="display: inline-block;">Discover</h2>
+          <p>See the top trending songs at Bowdoin.  <i class="fa fa-info-circle" title="These are the most popular songs at Bowdoin!"></i></p>
+        <ol class="list-group mt-3 w-75 overflow-hidden">
+            <li class="list-group-item" id="Add Love My Way"></i>1.  Love my Way<br><h6>The Psychedelic Furs</h6></li>
+            <li class="list-group-item" id="Add The Killing Moon"></i>2.  The Killing Moon<br><h6>Echo & The Bunnymen</h6></li>
+            <li class="list-group-item" id="Add Blue Monday" ></i>3.  Blue Monday<br><h6>New Order</h6></li>
+            <li class="list-group-item" id="Add Heaven Knows I'm Miserable Now" ></i>4.  Heaven Knows I'm Miserable Now<br><h6>The Smiths</h6></li>
+            <li class="list-group-item" id="Add Love Will Tear Us Apart" ></i>5.  Love Will Tear Us Apart<br><h6>Joy Division</h6></li>
+        </ol>
+        </div>
 
-    		<div class="col-4 hidden-md-down mt-4">
-    			<h3 class="border-bottom pb-2" style="display: inline-block;">Top Playlists</h3>
-    			<p>The most popular playlists at Bowdoin</p>
+        <div class="col-4 hidden-md-down mt-4">
+          <h3 class="border-bottom pb-2" style="display: inline-block;">Top Playlists</h3>
+          <p>The most popular playlists at Bowdoin</p>
             
             <div id="accordion">
               <div class="card">
@@ -135,9 +135,27 @@
               </div>
             </div>
         
-    		</div>
+        </div>
 
-  		</div>
+      </div>
+    </div>
+     <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Adding Music Preferences</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            In the discover music page you have the ability to see what other people at Bowdoin are listenting to. You can see the top trending songs on the left. If you would like to see a more curated version you can look at the top trending playlists on the right side of the page. Simply click on the title of the playlists to expand and collpase them. Explore and party on!
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
     </div>
 
 
