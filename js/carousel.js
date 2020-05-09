@@ -1,6 +1,6 @@
 
 
-
+// constants for searches
 const VALID_NAMES = ['bob', 'jim', 'clayton', 'prof. harmon','professor harmon', 'sarah harmon', 'george', 'ian', 'dylan']
 const VALID_SONG_NAMES = /^\w\w\w+\s?\w*\s?\w*\s?\w*\s?\w*\s?\w*\s?\w*\s?\w*\s?\w*$/g
 const BAND_NAME = ['The Best Band', 'The Best Band\'s Worst Enemy', 'The Worst Band', 'Clayton Rose', 'The Trustee Troubadour',
@@ -12,6 +12,8 @@ const GENRE_SONGS = {
   'Bowdoin Band BS': /^Mr\. Brightside$/g,
   'Punk': VALID_SONG_NAMES,
 }
+
+// link functions to buttons
 $("#next_button").click(function() {
 
   $('#throw_party').carousel('next');
@@ -31,6 +33,7 @@ $("#next_button_3").click(function() {
   $('#throw_party').carousel('next');
 });
 
+//implement save icon response
 $("#save").click(function() {
   $('#save').tooltip('enable');
   $('#save').tooltip('show');
@@ -73,11 +76,14 @@ $('#found_indicator').tooltip({
 
 })
 
+//update genre select text based on dropdown selection
 $('.dropdown-item').click(function () {
   const genre_select = document.getElementById('genre_select');
   var text = $(this).text();
   genre_select.innerText = text; 
 })
+
+//remove song from playlist
 function removeSong(name) {
   const playlist = document.getElementById('playlist').childNodes;
   const playlist_1 = document.getElementById('playlist_1').childNodes;
@@ -102,6 +108,8 @@ function removeSong(name) {
 
 
 }
+
+// add song to playlist
 function addSong(name, writer) {
   const playlist = document.getElementById('playlist');
   const playlist_1 = document.getElementById('playlist_1');
@@ -131,6 +139,8 @@ function addSong(name, writer) {
   }
 
 }
+
+// add and remove guests from guestlist
 function addGuest(name) {
   const guestList = document.getElementById('guest_list')
   const button = document.createElement('button');
@@ -148,7 +158,8 @@ function removeGuest(name) {
   const guest = document.getElementById(name)
   guest.remove()
 }
- 
+
+// show error on invalid search
 function showError(id) {
   $(id).tooltip({
     animation: true,
@@ -162,6 +173,7 @@ function showError(id) {
   }, 3000)
 }
 
+// update the status of search widget
 $('#search_songs').keyup(function(event){
         $('#search_songs').tooltip('hide');
         var keycode = (event.keyCode ? event.keyCode : event.which);
@@ -190,6 +202,7 @@ $('#search_songs').keyup(function(event){
         }
 });
 
+// update the status of genre search widget
 $('#search_genre_songs').keyup(function(event){
         $('#search_genre_songs').tooltip('hide');
         var keycode = (event.keyCode ? event.keyCode : event.which);
@@ -213,6 +226,7 @@ $('#search_genre_songs').keyup(function(event){
         }
 });
 
+// update the status of guest search widget
 $('#search').keyup(function(event){
         $('#search').tooltip('hide');
         var keycode = (event.keyCode ? event.keyCode : event.which);
@@ -241,7 +255,7 @@ $('#search').keyup(function(event){
         }
 });
 
-
+//display guest genres's with chart.js
 var ctx = document.getElementById("myChart");
 var myChart = new Chart(ctx, {
   type: 'bar',
@@ -272,7 +286,7 @@ var myChart = new Chart(ctx, {
   }
 });
 
-
+// register save tooltip
 $('#save').tooltip({
   animation: true,
   title: 'Playlist Saved!',
@@ -282,12 +296,14 @@ $('#save').tooltip({
 
 $('#save').tooltip('disable')
 
+// register not saved tool tip
 $('.fa-exclamation').tooltip({
   animation: true,
   title: 'playlist not saved!',
   placement: 'right'
 })
 
+// set saved status, show saved response to user
 function setSavedStatus() {
   const exclamations = document.getElementsByClassName('fa fa-exclamation');
   for (let i = 0;i<4;i++){
@@ -322,7 +338,8 @@ function setSavedStatus() {
 
 }
 
-// confetii code from the javascript library example, adapted for use in this project.
+// confetii code from the javascript library example, adapted for use in this project. 
+// original example code: https://www.kirilv.com/canvas-confetti/
 function blowConfetti () {
   var count = 200;
 var defaults = {
