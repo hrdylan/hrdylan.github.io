@@ -8,6 +8,10 @@ As our design developed from wireframe to prototype we made to major changes. Af
 
 To run DJ Hero locally open index.html. You can also visit DJ Hero at hrdylan.github.io.
 
+## Valid Guests
+
+There are only a few valid guests: ['bob', 'jim', 'clayton', 'prof. harmon','professor harmon', 'sarah harmon', 'george', 'ian', 'dylan']
+
 ## Authors
 
 * **Ian Stweart** - (https://github.com/ipstewart)
